@@ -36,6 +36,7 @@
             this.Ground = new System.Windows.Forms.PictureBox();
             this.ScoreText = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.StartTimer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TopPipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BottomPipe)).BeginInit();
@@ -47,7 +48,7 @@
             this.TopPipe.BackColor = System.Drawing.Color.Transparent;
             this.TopPipe.BackgroundImage = global::Flappy.Properties.Resources.pipedown;
             this.TopPipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.TopPipe.Location = new System.Drawing.Point(771, -1);
+            this.TopPipe.Location = new System.Drawing.Point(452, -1);
             this.TopPipe.Name = "TopPipe";
             this.TopPipe.Size = new System.Drawing.Size(114, 171);
             this.TopPipe.TabIndex = 1;
@@ -59,9 +60,9 @@
             this.Bird.BackgroundImage = global::Flappy.Properties.Resources._794718342707281990;
             this.Bird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Bird.InitialImage = ((System.Drawing.Image)(resources.GetObject("Bird.InitialImage")));
-            this.Bird.Location = new System.Drawing.Point(121, 282);
+            this.Bird.Location = new System.Drawing.Point(12, 175);
             this.Bird.Name = "Bird";
-            this.Bird.Size = new System.Drawing.Size(73, 75);
+            this.Bird.Size = new System.Drawing.Size(87, 33);
             this.Bird.TabIndex = 2;
             this.Bird.TabStop = false;
             // 
@@ -70,9 +71,9 @@
             this.BottomPipe.BackColor = System.Drawing.Color.Transparent;
             this.BottomPipe.BackgroundImage = global::Flappy.Properties.Resources.pipe;
             this.BottomPipe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BottomPipe.Location = new System.Drawing.Point(433, 336);
+            this.BottomPipe.Location = new System.Drawing.Point(262, 330);
             this.BottomPipe.Name = "BottomPipe";
-            this.BottomPipe.Size = new System.Drawing.Size(112, 299);
+            this.BottomPipe.Size = new System.Drawing.Size(112, 267);
             this.BottomPipe.TabIndex = 3;
             this.BottomPipe.TabStop = false;
             // 
@@ -80,9 +81,9 @@
             // 
             this.Ground.BackgroundImage = global::Flappy.Properties.Resources.ground;
             this.Ground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ground.Location = new System.Drawing.Point(-2, 626);
+            this.Ground.Location = new System.Drawing.Point(-3, 591);
             this.Ground.Name = "Ground";
-            this.Ground.Size = new System.Drawing.Size(948, 67);
+            this.Ground.Size = new System.Drawing.Size(610, 67);
             this.Ground.TabIndex = 4;
             this.Ground.TabStop = false;
             // 
@@ -103,17 +104,28 @@
             this.gameTimer.Interval = 20;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
             // 
+            // StartTimer
+            // 
+            this.StartTimer.AutoSize = true;
+            this.StartTimer.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartTimer.Location = new System.Drawing.Point(258, 220);
+            this.StartTimer.Name = "StartTimer";
+            this.StartTimer.Size = new System.Drawing.Size(116, 49);
+            this.StartTimer.TabIndex = 7;
+            this.StartTimer.Text = "label1";
+            // 
             // Flappy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(943, 688);
+            this.ClientSize = new System.Drawing.Size(606, 639);
             this.Controls.Add(this.ScoreText);
+            this.Controls.Add(this.Bird);
+            this.Controls.Add(this.StartTimer);
             this.Controls.Add(this.Ground);
             this.Controls.Add(this.BottomPipe);
-            this.Controls.Add(this.Bird);
             this.Controls.Add(this.TopPipe);
             this.Name = "Flappy";
             this.Text = "Flappy";
@@ -136,6 +148,7 @@
         private System.Windows.Forms.PictureBox Ground;
         private System.Windows.Forms.Label ScoreText;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label StartTimer;
     }
 }
 
